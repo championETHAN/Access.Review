@@ -1,0 +1,6 @@
+@Access.Review_HostAddress = http://localhost:5127
+
+GET {{Access.Review_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
