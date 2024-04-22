@@ -1,4 +1,5 @@
-﻿using Access.Review.Models.Enum;
+﻿using Access.Review.Models.Data_Models;
+using Access.Review.Models.Enum;
 
 namespace Access.Review.Models.Users_Models
 {
@@ -10,7 +11,7 @@ namespace Access.Review.Models.Users_Models
         public StatusEnum Status { get; set; }
         public int Trophies { get; set; }
         //public List<Discounts> EarnedDiscounts {get; set; }
-        //public img ProfilePicture {get; set;} 
-        //public List<EventPhotos> Collection {get; set;}
+        public Photo ProfilePicture { get; set; }
+        public ICollection<Photo> Collection { get; set; }
     }
 }

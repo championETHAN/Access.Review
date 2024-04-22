@@ -3,7 +3,7 @@ using Access.Review.Models.Users_Models;
 
 namespace Access.Review.Models.Data_Models
 {
-    public class VenueProfile
+    public class Venue
     {
         //General Venue Information
         public Guid EstablishmentsId { get; set; }
@@ -11,9 +11,8 @@ namespace Access.Review.Models.Data_Models
         public string EstablishmentsLocation { get; set; }
         public DateTime EstablishmentsHoursOfOperation { get; set; }
         public int EstablishmentsPhoneNumber { get; set; }
-        //public list<ImagesOfEstablishment> EstablishmentsPhotos {get; Set;}
-        //public List<EstablishmentsReviews> Reviews
-        public PricingEnum EstablishmentsPricing {get; set;}
+        public ICollection<Photo> EstablishmentsPhotos { get; set; }
+        public PricingEnum EstablishmentsPricing { get; set; }
 
         //Venue Restrictions
         public bool EstablishmentTwentyOnePlus { get; set; }
@@ -25,8 +24,10 @@ namespace Access.Review.Models.Data_Models
         public bool EstablishmentServesAlcohol { get; set;}
 
 
+        //public List<EstablishmentsReviews> Reviews
         public ICollection<Coordinator> AllowedCoordinators { get; set; }
         public ICollection<Event> AllowedEvents { get; set; }
+
 
     }
 }

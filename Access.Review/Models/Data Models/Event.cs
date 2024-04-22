@@ -1,4 +1,5 @@
 ﻿using Access.Review.Models.Enum;
+using System.Numerics;
 
 namespace Access.Review.Models.Data_Models
 {
@@ -11,7 +12,7 @@ namespace Access.Review.Models.Data_Models
         public DateTime EventStartTime { get; set; }
         public DateTime EventEndTime { get; set; }
         public PricingEnum Pricing {get; set; }
-        //public List<PastEventPhotos> EventPhotos {get; set;}
+        public ICollection<Photo> EventPhotos { get; set; }
         public string CoordinatorsPhoneNumber { get; set; }
 
         //Event Restrictions
@@ -24,8 +25,9 @@ namespace Access.Review.Models.Data_Models
         public bool EventServesAlcohol { get; set; }
         public bool EventRestrooms { get; set; }
 
+        public ICollection<Vendor> EventVendors { get; set; }
         public ICollection<Users_Models.Coordinator> EventCoordinator {get; set;}
-        public VenueProfile EventVenue { get; set; }
+        public Venue EventVenue { get; set; }
 
     }
 }
